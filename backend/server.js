@@ -2,7 +2,6 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
 import booksRoute from './routes/booksRoute.js';
-import cors from 'cors';
 
 import path from 'path';
 
@@ -11,9 +10,6 @@ const app = express();
 const PORT = process.env.PORT || 5555;
 
 const __dirname = path.resolve();
-
-//Middleware for handling CORS POLICY
-app.use(cors());
 
 // app.get('/', (request, response) => {
 //   console.log(request);
